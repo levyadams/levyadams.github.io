@@ -30,7 +30,7 @@ var inline = require('gulp-inline');
 
 //main task for building production dir
 gulp.task('build', function (callback) {
-    runSequence('clean', ['responsive-jpg', 'responsive-webp', 'copy-sw','copy-manifest','copy-svg','copy-gif'], 'scripts'), callback
+    runSequence('clean', ['responsive-jpg', 'responsive-webp', 'copy-sw','copy-manifest','copy-svg','copy-gif','copy-cname'], 'scripts'), callback
 });
 
 //delete build to start over from scratch
@@ -160,7 +160,10 @@ gulp.task('copy-gif', function () {
     gulp.src('src/images/svg/*.gif')
         .pipe(gulp.dest('build/images/svg/'));
 });
-
+gulp.task('copy-cname', function () {
+    gulp.src('./CNAME')
+        .pipe(gulp.dest('build'));
+});
 // =======================================================================// 
 //                   Server                                               //        
 // =======================================================================//  

@@ -1,0 +1,9 @@
+{
+  "short_name": "LAdamsHome",
+  "name": "Levi Adams showcase",
+  "start_url": "/",
+  "background_color": "#317EFB",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#317EFB"
+}

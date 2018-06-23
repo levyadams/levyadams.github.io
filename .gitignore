@@ -3,12 +3,15 @@
 # dependencies
 /node_modules
 
-# testing
-/coverage
 
 # production
-build/
+src/
 package-lock.json
+package.json
+README.md
+.babelrc
+.gulpfile.json
+sw.js
 
 # misc
 .DS_Store
